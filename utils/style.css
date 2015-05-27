@@ -1,0 +1,763 @@
+/*
+ * style i czcionki
+ */
+
+.i, .italic
+{
+	font-style: italic;
+}
+
+.b, .bold
+{
+	font-weight: bold;
+}
+
+.rfloat
+{
+	float: right;
+}
+
+.lfloat
+{
+	float: left;
+}
+
+.clear
+{
+	clear: both;
+	width: 0px;
+	height: 0px;
+	margin: 0px;
+	padding: 0px;
+	border: 0;
+}
+
+.pointercursor
+{
+	cursor: pointer;
+}
+
+.hidden
+{
+	visibility: hidden;
+}
+
+.nodisplay
+{
+	display: none;
+}
+
+@font-face {
+	font-family: f_Verdana;
+	src: url(Verdana.ttf) format("opentype");
+}
+
+
+/*
+ * style ogólne, layout każdej podstrony
+ */
+body
+{
+	padding: 0px 0px;
+	margin: 0px 0px;
+	background-color: #DDF;
+}
+
+a, a:hover,a:visited
+{
+	text-decoration: none;
+	color: #036; 
+}
+
+#global_container
+{
+	width: 1000px;
+	border: 2px solid #07D;
+	border-radius: 10px;
+	margin: 15px auto 0px auto;
+	padding: 0;
+	background-color: #9AE;
+	color: #036; 
+	font-family: f_Verdana, Verdana, Helvetica, sans-serif;
+}
+
+
+/*
+ * style przypisane do elementów strony logowania index.php
+ */
+ 
+#pojemnik_logowania
+{
+	width: 380px;
+	margin: 180px auto;
+}
+
+#menu_login_container
+{
+	width: 360px;
+	height: 140px;
+	background-color: #FFF;
+	margin: 10px;
+	border-radius: 3px;
+}
+
+#komentarz_logowania
+{
+	height: 16px;
+	margin: 10px;
+}
+
+#komentarz_logowania span
+{
+	display: block;
+	height: 16px;
+	background-color: #FFF;
+	padding: 4px;
+	border-radius: 3px;
+	font-size: 12px;
+	opacity: 0.7;
+}
+
+#komentarz_logowania span.wylogowano
+{
+	color: blue;
+	font-weight: bold;
+}
+
+#komentarz_logowania span.blad
+{
+	color: red;
+	font-weight: bold;
+}
+
+#portrait_container
+{
+	width: 120px;
+	height: 120px;
+	float: left;
+	margin: 10px 10px;
+}
+
+#menu_login_right_container
+{
+	position: relative;
+	left: auto;
+	top: auto;
+	margin: 10px 10px;
+	padding: 5px 5px 5px 5px;
+	width: 190px;
+	height: 110px;
+	float: left;
+	background-color: #ABF;
+}
+
+#menu_login_right_container input
+{
+	display: block;
+	margin: 0px auto 0px auto;
+	font-size: 12px;
+}
+
+#menu_login_right_container .login_input_title
+{
+	font-size: 12px;
+	padding: 1px;
+	font-family: f_Verdana, Verdana, Helvetica, sans-serif;
+}
+
+#login_button
+{
+	position: absolute;
+	bottom: 5px;
+	left: 25px;
+	height: 18px;
+	width: 150px;
+	padding: 2px 2px;
+	/*margin: 12px 0px 0px 0px;*/
+	
+	background-color: #59E;
+	border-radius: 2px;
+	
+	text-align: center;
+	font-size: 14px;
+	font-family: f_Verdana, Verdana, Helvetica, sans-serif;
+	
+	transition: background 0.15s ease-out;
+	-webkit-transition: background 0.15s ease-out;
+	-o-transition: background 0.15s ease-out;
+	-moz-transition: background 0.15s ease-out;
+}
+
+#login_button:hover
+{
+	background-color: #6AF;
+}
+
+
+
+/*
+ * style odpowiadające za wygląd i ustawienie menu głównego
+ */
+ 
+#top_menu
+{
+	position: relative;
+	margin: 40px 0px 40px 0px;
+	height: 44px;
+	background-color: #07D;
+	width: auto;
+}
+
+#top_menu ul
+{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	line-height: 1;
+}
+
+#top_menu > ul
+{
+	position: relative;
+	display: block;
+	background-color: #06C;
+	height: 44px;
+}
+
+#top_menu > ul > li
+{
+	position: relative;
+	display: block;
+	float: left;
+	margin: 0px;
+	padding: 0px;
+}
+
+#top_menu ul li a, #top_menu ul li span
+{
+	text-decoration: none;
+	display: block;
+	font-family: f_Verdana, Verdana;
+}
+
+#top_menu > ul > li > a, #top_menu > ul > li > span
+{
+	color: #AAF;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 15px 20px;
+	
+	transition: color 0.20s ease-out;
+	-moz-transition: color 0.20s ease-out;
+	-webkit-transition: color 0.20s ease-out;
+	-o-transition: color 0.20s ease-out;
+}
+
+#top_menu > ul > li:hover > a, #top_menu > ul > li:hover > span
+{
+	color: #FFF;
+}
+
+/* ustawienie strzałki */
+#top_menu > ul > li.has_sub > a, #top_menu > ul > li.has_sub > span
+{
+	padding-right: 32px;
+}
+
+#top_menu > ul > li.has_sub:after
+{
+	content: '';
+	display: block;
+	position: absolute;	
+	right: 10px;
+	top: 20px;
+	border: 5px solid transparent;
+	border-top-color: #AAF;
+	
+	transition: border-top-color 0.20s ease-out, top 0.25s ease;
+	-moz-transition: border-top-color 0.20s ease-out, top 0.25s ease;
+	-webkit-transition: border-top-color 0.20s ease-out, top 0.25s ease;
+	-o-transition: border-top-color 0.20s ease-out, top 0.25s ease;
+}
+
+#top_menu > ul > li.has_sub:hover:after
+{
+	border-top-color: #FFF;
+	top: 25px;
+}
+
+/* style dla podmenu */
+
+#top_menu > ul ul
+{
+	position: absolute;
+	top: 44px;
+	left: auto;
+	
+	visibility: hidden;
+	opacity: 0;
+	background-color: #FFF;
+	
+	transition: opacity 0.15s ease-in, visibility 0s linear .2s;
+	-moz-transition: opacity 0.15s ease-in, visibility 0s linear .2s;
+	-webkit-transition: opacity 0.15s ease-in, visibility 0s linear .2s;
+	-o-transition: opacity 0.15s ease-in, visibility 0s linear .2s;
+}
+
+#top_menu > ul > li:hover > ul
+{
+	opacity: 1;
+	visibility: visible;
+	
+	transition: opacity 0.15s ease-in, visibility 0s linear 0s;
+	-moz-transition: opacity 0.15s ease-in, visibility 0s linear 0s;
+	-webkit-transition: opacity 0.15s ease-in, visibility 0s linear 0s;
+	-o-transition: opacity 0.15s ease-in, visibility 0s linear 0s;
+}
+
+#top_menu ul ul li
+{
+	display: block;
+	position: relative;
+}
+
+#top_menu ul ul li > a, #top_menu ul ul li > span
+{
+	color: #036;
+	font-size: 12px;
+	
+	min-width: 120px;
+	padding: 10px 15px;
+	
+	border: 1px solid #DDF;
+	border-top: 0;
+	
+	transition: color 0.20s ease-out;
+	-moz-transition: color 0.20s ease-out;
+	-webkit-transition: color 0.20s ease-out;
+	-o-transition: color 0.20s ease-out;
+}
+
+#top_menu ul ul li:hover > a, #top_menu ul ul li:hover > span
+{
+	color: #00F;
+}
+
+
+/*
+ * style dla poszczególnych podstron wyświetlanych w menu
+ */
+ 
+.tresc_strony
+{
+	margin: 30px 30px;
+	padding: 20px;
+	display: block;
+	
+	border: 1px solid #FFF;
+	border-radius: 5px;
+	background-color: #D0D0FF;
+}
+
+/*
+ * style dla listy testów
+ */
+
+ul#lista_testow
+{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+ul#lista_testow li
+{
+	display: block;
+	margin: 10px 0px;
+	width: 800px;
+}
+
+ul#lista_testow li span, ul#lista_testow li a
+{
+	display: block;
+	padding: 10px 10px;
+	border: 2px solid;
+	border-radius: 5px;
+	
+	font-size: 14px;
+	font-family: f_Verdana, Verdana, Helvetica, sans-serif;
+}
+
+ul#lista_testow li.aktywny span, ul#lista_testow li.aktywny a
+{
+	cursor: pointer;
+	border-color:  #07D;
+	font-weight: bold;
+	
+	transition: border-width .5s ease, background .2s ease;
+	-webkit-transition: border-width .5s ease, background .2s ease;
+	-o-transition: border-width .5s ease, background .2s ease;
+	-moz-transition: border-width .5s ease, background .2s ease;
+}
+ul#lista_testow li.aktywny:hover span, ul#lista_testow li.aktywny:hover a
+{
+	border-left-width: 150px;
+	color: #04A;
+	
+	box-shadow: 0px 0px 10px 3px #FFFFFF;
+	-moz-box-shadow: 0px 0px 10px 3px #FFFFFF;
+	-webkit-box-shadow: 0px 0px 10px 3px #FFFFFF;
+	-o-box-shadow: 0px 0px 10px 3px #FFFFFF;
+}
+
+ul#lista_testow li.dostepny span, ul#lista_testow li.dostepny a
+{
+	background-color: #B8C0FF;
+}
+ul#lista_testow li.dostepny:hover span, ul#lista_testow li.dostepny:hover a
+{
+	background-color: #D5E0FF;
+}
+
+ul#lista_testow li.wazny span, ul#lista_testow li.wazny a
+{
+	background-color: #F0F1FF;
+}
+ul#lista_testow li.wazny:hover span, ul#lista_testow li.wazny:hover a
+{
+	background-color: #FFFFFF;
+}
+
+ul#lista_testow li.nieaktywny span, ul#lista_testow li.nieaktywny a
+{
+	cursor: default;
+	border-color: #679;
+	background-color: #C5C8D9;
+	
+	transition: border-width .18s ease;
+	-webkit-transition: border-width .18s ease, background .2s ease;
+	-o-transition: border-width .18s ease;
+	-moz-transition: border-width .18s ease;
+}
+ul#lista_testow li.nieaktywny:hover span, ul#lista_testow li.nieaktywny:hover a
+{
+	border-left-width: 20px;
+	
+	box-shadow: 0px 0px 5px 1px #889 inset;
+	-moz-box-shadow: 0px 0px 5px 1px #889 inset;
+	-webkit-box-shadow: 0px 0px 5px 1px #889 inset;
+	-o-box-shadow: 0px 0px 5px 1px #889 inset;
+}
+
+ul#lista_testow li.zablokowany span,
+ul#lista_testow li.zablokowany a,
+ul#lista_testow li.niedostepny span,
+ul#lista_testow li.niedostepny a
+{
+	background-color: #C5C8D9;
+}
+ul#lista_testow li.zablokowany:hover span,
+ul#lista_testow li.zablokowany:hover a,
+ul#lista_testow li.niedostepny:hover span,
+ul#lista_testow li.niedostepny:hover a
+{
+	background-color: #B8C0D2;
+}
+
+ul#lista_testow li.zdany span,
+ul#lista_testow li.zdany a
+{
+	background-color: #C5D0F0;
+}
+ul#lista_testow li.zdany:hover span,
+ul#lista_testow li.zdany:hover a
+{
+	background-color: #C0C8E5;
+}
+
+/*
+ * tabela z danymi uczniów
+ */
+
+#strona_glowna
+{	
+	background-color: #D0D0FF;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+table#dane_ucznia
+{
+	font-family: f_Verdana, Verdana, Helvatica, sans-serif;
+	font-size: 15px;
+	border-radius: 5px;
+	width: 600px;
+}
+
+#dane_ucznia td
+{
+	padding: 10px 10px;
+}
+
+#dane_ucznia tr td:first-child
+{
+	width: 150px;
+}
+
+#dane_ucznia td.ocena
+{
+	font-family: f_Verdana, Verdana, Helvetica, sans-serif;
+	font-size: 22px;
+	font-weight: bold;
+}
+#dane_ucznia td.ocena1
+{
+	color: #D00;
+}
+#dane_ucznia td.ocena2
+{
+	color: #F60;
+}
+#dane_ucznia td.ocena3
+{
+	color: #FB0;
+}
+#dane_ucznia td.ocena4
+{
+	color: #0A0;
+}
+#dane_ucznia td.ocena5
+{
+	color: #05F
+}
+#dane_ucznia td.ocena6
+{
+	color: #A0F;
+}
+
+/*
+ * podglad testu
+ */
+table#podglad_testu
+{
+	font-family: f_Verdana, Verdana, Helvatica, sans-serif;
+	font-size: 16px;
+	border: 2px solid #07D;
+	background-color: #C0C3FF;
+	border-radius: 5px;
+}
+
+#podglad_testu td
+{
+	padding: 10px 20px;
+}
+
+#podglad_testu td.dostepnosc
+{	
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#prz_rozp
+{
+	padding: 10px;
+}
+
+#prz_rozp ul
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	line-height: 1;
+}
+
+#prz_rozp ul li
+{
+	position: relative;
+	display: block;
+	margin: 5px 0px;
+}
+
+#prz_rozp ul li span, #prz_rozp ul li a
+{
+	display: block;
+	width: 200px;
+	background-color: #e0e5ff;
+	border: 1px solid #bbbbCF;
+	border-radius: 7px;
+	padding: 6px 10px;
+		
+	font-family: f_Verdana, Verdana, Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+#prz_rozp ul li.aktywny span, #prz_rozp ul li.aktywny a
+{
+	cursor: pointer;
+	background-color: #e0e3ff;
+	border-color: #90A0EF;
+}
+
+#prz_rozp ul li.nieaktywny span, #prz_rozp ul li.nieaktywny a
+{
+	cursor: default;
+	background-color: #e0e5e5;
+	border-color: #bbbbcc;
+}
+
+#prz_rozp ul li.blokada span.zakrycie
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	padding-top: 17px;
+	padding-bottom: 17px;
+	background-color: #e0e5e5;
+}
+
+#prz_rozp ul li span.haslo
+{
+	font-size: 12px;
+	height: 38px;
+}
+
+/*
+ * style nawiązujące do wyświetlania pytań o odpowiedzi
+ */
+ #test_pojemnik
+ {
+	margin: 10px 20px 20px 20px;
+	padding: 10px 15px;
+	background-color: #C0C3FF;
+	border-radius: 5px;
+	color: #036;
+ }
+
+
+#test_pojemnik .pytanie
+{
+	display: block;
+	padding: 10px 5px;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: f_Verdana, Verdana, Helvetica, sans-serif;
+}
+
+#test_pojemnik ul.odpowiedzi
+{
+	display: block;
+	margin: 0;
+	padding: 10px;
+	line-height: 1;
+	list-style: none;
+}
+
+#test_pojemnik ul.odpowiedzi li
+{
+	display: block;
+	padding: 5px 10px;
+	margin: 5px 0px;
+	width: 300px;
+	
+	font-size: 16px;
+	font-family: f_Verdana, Verdana, Helvetica, sans-serif;
+	cursor: pointer;
+	
+	transition: box-shadow 0.2s, background 0.2s;
+}
+
+#test_pojemnik ul.odpowiedzi li:hover
+{
+	color: #036;
+	background-color: #D5D5FF;
+	box-shadow: 0px 0px 10px 3px #FFFFFF;
+	-moz-box-shadow: 0px 0px 10px 3px #FFFFFF;
+	-webkit-box-shadow: 0px 0px 10px 3px #FFFFFF;
+	-o-box-shadow: 0px 0px 10px 3px #FFFFFF;
+}
+
+
+/*
+ * style ustawiające tabelkę z listą wyników
+ */
+
+#lista_wynikow>table 
+{
+	// padding: 20px 15px;
+	color: #036;
+	border-collapse: separate;
+	border-spacing: 5px;
+}
+
+#lista_wynikow table table
+{
+	border-collapse: collapse;
+	font-size: 14px;
+}
+
+#lista_wynikow table table td,
+#lista_wynikow table table th
+{
+	//border: 1px solid #fff;
+	padding: 3px;
+}
+
+#lista_wynikow>table>tbody>tr>td,
+#lista_wynikow>table>tbody>tr>th
+{
+	background-color: #D0D0FF;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 0px;
+	text-align: center;
+}
+
+#lista_wynikow table .nazwa
+{
+	text-align: left;
+	font-size: 14px;
+	width: 400px;
+	margin: 5px 0px;
+}
+
+
+/*
+ * style do podstrony zmiana_hasla
+ */
+
+#zmiana_hasla
+{	
+	background-color: #D0D0FF;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 14px;
+}
+
+#zmiana_hasla span
+{	
+	display: block;
+	padding: 10px 10px;
+}
+
+#zmiana_hasla span.blad
+{	
+	color: #D0D;
+}
+
+#zmiana_hasla table td
+{
+	padding: 5px;
+}
+
+
+
+/*
+ * style do raportu błędów
+ */
+#raport_bledu table
+{
+	font-size: 14px;
+}
